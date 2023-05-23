@@ -1,0 +1,32 @@
+# Arquivos e diretórios específicos do Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+
+# Ambiente virtual do Python (se estiver usando virtualenv ou venv)
+venv/
+env/
+
+# Dependências instaladas via pip
+# Você pode ajustar esta seção de acordo com suas necessidades específicas
+# Certifique-se de incluir todas as dependências de desenvolvimento e produção do seu projeto
+# Exemplo: Django, Django Rest Framework, etc.
+# Você também pode usar um arquivo requirements.txt em vez disso
+requirements.txt
+*.egg-info/
+dist/
+build/
+
+# Arquivos de mídia carregados pelos usuários (se aplicável)
+media/
+
+# Outros arquivos e diretórios
+*.swp
+.DS_Store
+.env
+
+#vscode
+/.vscode
