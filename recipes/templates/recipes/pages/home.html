@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include 'recipes/partials/head.html' %}
+    {% include 'recipes/partials/head.html' %}
 <body>
-    <header class="main-header-container">
-        <div class="main-header container">
-            <h1>
-                <a class="main-logo" href="/">
-                    <i class="fa-sharp fa-solid fa-utensils main-logo-icon"></i>
-                    <span class="main-logo-text">
-                        Recipes
-                    </span>
-                </a>
-            </h1>
+    {% include 'recipes/partials/header.html' %}
+
+    <dvi class="search-container">
+        <div class="container">
+            <form action="" class="search-form">
+                <input type="search" name="search" class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
-    </header>
+    </dvi>
 </body>
 </html>
