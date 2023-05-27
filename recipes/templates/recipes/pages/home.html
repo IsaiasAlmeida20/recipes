@@ -3,16 +3,18 @@
     {% include 'recipes/partials/head.html' %}
 <body>
     {% include 'recipes/partials/header.html' %}
+    {% include 'recipes/partials/search.html' %}
 
-    <dvi class="search-container">
-        <div class="container">
-            <form action="" class="search-form">
-                <input type="search" name="search" class="search-input">
-                <button type="submit" class="search-button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            <div class="recipe recipe-list-item">
+                <div class="recipe-cover">
+                    <img src="https://xtudoreceitas.com/wp-content/uploads/Bolo-de-Fuba-Caseiro-Simples.jpg" alt="Bolo">
+                </div>
+                <h1>Description</h1>
+            </div>
         </div>
-    </dvi>
+    </main>
+    
 </body>
 </html>
