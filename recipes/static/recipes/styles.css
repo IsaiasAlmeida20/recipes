@@ -226,6 +226,20 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(2);
 }
 
+.main-content-detail .recipe-list-item {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.main-content-detail .recipe-list-item:hover {
+    transform: scale(1);
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, .25);
+}
+
+.main-content-detail .recipe-cover img {
+    width: 100%;
+}
+
 .main-footer {
     display: flex;
     align-items: center;
