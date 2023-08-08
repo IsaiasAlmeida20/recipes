@@ -9,6 +9,7 @@ packages = [{include = "curso_django"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.2.1"
+faker = "^19.3.0"
 
 
 [build-system]
