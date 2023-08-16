@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "curso-django"
+name = "recipes"
 version = "0.1.0"
 description = ""
 authors = ["Isaias Almeida <isaiasalmeida319@gmail.com>"]
 readme = "README.md"
-packages = [{include = "curso_django"}]
+packages = [{include = "recipes"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
