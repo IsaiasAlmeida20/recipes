@@ -1,11 +1,9 @@
 from django.test import TestCase
-from django.core.files.uploadedfile import SimpleUploadedFile
 from django.urls import reverse, resolve
 from recipes import views
-from recipes.models import Recipe, Category, User
-
-
-class RecipeViewsTest(TestCase):
+from .test_recipe_base import RecipeTestBase, Recipe
+class RecipeViewsTest(RecipeTestBase):
+   
     def test_recipe_home_view_function_is_correct(self):
         view = resolve(reverse('recipes:home'))
         self.assertIs(views.home, view.func)
@@ -26,29 +24,7 @@ class RecipeViewsTest(TestCase):
         self.assertTemplateUsed(response, 'recipes/pages/home.html')
 
     def test_recipe_home_template_loads_recipes(self):
-        category = Category.objects.create(name='Category')
-        author = User.objects.create_user(
-            first_name='user',
-            last_name='name',
-            username='username',
-            password='123456',
-            email='username@email.com',
-        )
-        recipe = Recipe.objects.create(
-            category=category,
-            author=author,
-            title='Recipe Title',
-            description='Recipe Description',
-            slug='recipe-slug',
-            preparation_time=10,
-            preparation_time_unit='Minutos',
-            servings=5,
-            servings_unit='Porções',
-            cover = SimpleUploadedFile("fake_image.jpg", b"file_content", content_type="image/jpeg"),
-            preparation_steps='Recipe Preparation Steps',
-            preparation_steps_is_html=False,
-            is_published=True,
-        )
+        self.make_recipe()
         response = self.client.get(reverse('recipes:home'))
         response_context = response.context['recipes']
         response_content = response.content.decode('utf-8')
