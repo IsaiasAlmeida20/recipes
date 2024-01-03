@@ -32,3 +32,6 @@ static/
 #vscode
 /.vscode
 /.idea
+
+#others
+htmlcov/
