@@ -69,3 +69,7 @@ class RecipeViewsTest(RecipeTestBase):
     def test_recipe_view_returns_404_if_not_recipe(self):
         response = self.client.get(reverse('recipes:recipe', kwargs={'id': 1000}))
         self.assertEqual(404, response.status_code)
+
+    def test_recipe_search_uses_correct_view_function(self):
+        resolved = resolve(reverse('recipes:search'))
+        self.assertIs(resolved.func, views.search)
