@@ -35,3 +35,22 @@ class PaginationTest(TestCase):
             current_page=3
         )
         self.assertEqual([2,3,4,5], pagination)
+
+    def test_make_sure_middle_range_is_correct(self):
+        # Current page = 10 - Middle page = 10
+        # Here change middle page
+        pagination = make_pagination_range(
+            page_range=list(range(1,21)),
+            qty_pages=4,
+            current_page=10
+        )
+        self.assertEqual([9,10,11,12], pagination)
+
+        # Current page = 14 - Middle page = 14
+        # Here change middle page
+        pagination = make_pagination_range(
+            page_range=list(range(1,21)),
+            qty_pages=4,
+            current_page=14
+        )
+        self.assertEqual([13,14,15,16], pagination)
