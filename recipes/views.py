@@ -30,8 +30,12 @@ def category(request, category_id):
             is_published=True
         ).order_by('-id')
     )
+
+    page_obj, pagination_range = make_pagination(request, recipes, 9)
+
     return render(request, 'recipes/pages/category.html', context={
-        'recipes': recipes,
+        'recipes': page_obj,
+        'pagination_range': pagination_range,
         'title': f'{recipes[0].category.name} - Category | '
     })
 
