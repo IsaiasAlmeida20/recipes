@@ -17,6 +17,7 @@ pytest-watch = "^4.2.0"
 parameterized = "^0.9.0"
 coverage = "^7.4.0"
 commitizen = "^3.13.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
